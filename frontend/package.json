@@ -1,0 +1,39 @@
+{
+  "name": "marani-edc",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@aws-amplify/api": "6.3.9",
+    "@aws-amplify/api-rest": "4.1.2",
+    "@aws-amplify/auth": "^6.12.2",
+    "@aws-amplify/ui-react-core": "^3.4.1",
+    "aws-sdk": "^2.1692.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.52.0"
+  },
+  "devDependencies": {
+    "@aws-amplify/api-rest": "4.1.2",
+    "@aws-amplify/cli-extensibility-helper": "^3.0.37",
+    "@aws-amplify/ui-react": "^6.11.0",
+    "@eslint/js": "^9.13.0",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "aws-amplify": "^6.3.9",
+    "@aws-amplify/auth": "^6.12.2",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "typescript": "^5.8.3",
+    "vite": "^5.4.8"
+  }
+}

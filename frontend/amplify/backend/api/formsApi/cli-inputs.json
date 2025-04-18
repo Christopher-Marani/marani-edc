@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "paths": {
+    "/forms": {
+      "name": "/forms",
+      "lambdaFunction": "CreateFormFunction",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create"
+        ]
+      }
+    }
+  }
+}

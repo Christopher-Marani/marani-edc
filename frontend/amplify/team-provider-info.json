@@ -1,0 +1,51 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-maraniedc-dev-f41dd-authRole",
+      "UnauthRoleArn": "arn:aws:iam::271115904332:role/amplify-maraniedc-dev-f41dd-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::271115904332:role/amplify-maraniedc-dev-f41dd-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-maraniedc-dev-f41dd-deployment",
+      "UnauthRoleName": "amplify-maraniedc-dev-f41dd-unauthRole",
+      "StackName": "amplify-maraniedc-dev-f41dd",
+      "StackId": "arn:aws:cloudformation:us-east-1:271115904332:stack/amplify-maraniedc-dev-f41dd/e0ec01f0-1719-11f0-857c-0e78da857aef",
+      "AmplifyAppId": "d15jl3isav38hd",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-maraniedc-dev-f41dd-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "maraniedcbacff333": {}
+      },
+      "function": {
+        "CreateFormFunction": {
+          "deploymentBucketName": "amplify-maraniedc-dev-f41dd-deployment",
+          "s3Key": "amplify-builds/CreateFormFunction-67536b2f437a33376263-build.zip"
+        },
+        "GetSubmissionsFunction": {
+          "deploymentBucketName": "amplify-maraniedc-dev-f41dd-deployment",
+          "s3Key": "amplify-builds/GetSubmissionsFunction-65463758794134464d67-build.zip"
+        },
+        "SubmitFormFunction": {
+          "deploymentBucketName": "amplify-maraniedc-dev-f41dd-deployment",
+          "s3Key": "amplify-builds/SubmitFormFunction-6448484a594b744f746f-build.zip"
+        },
+        "GetSubmissionsFunctionNew": {
+          "deploymentBucketName": "amplify-maraniedc-dev-f41dd-deployment",
+          "s3Key": "amplify-builds/GetSubmissionsFunctionNew-695a5078375864397143-build.zip"
+        },
+        "UpdateSubmissionStatusFunction": {
+          "deploymentBucketName": "amplify-maraniedc-dev-f41dd-deployment",
+          "s3Key": "amplify-builds/UpdateSubmissionStatusFunction-495956774b306b425764-build.zip"
+        },
+        "SubmissionRouterFunction": {
+          "deploymentBucketName": "amplify-maraniedc-dev-f41dd-deployment",
+          "s3Key": "amplify-builds/SubmissionRouterFunction-77494350542f6a345572-build.zip"
+        }
+      },
+      "api": {
+        "formsApi": {},
+        "submissionApi": {}
+      }
+    }
+  }
+}

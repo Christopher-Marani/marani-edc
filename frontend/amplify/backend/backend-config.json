@@ -1,0 +1,188 @@
+{
+  "api": {
+    "formsApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CreateFormFunction"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "submissionApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "SubmissionRouterFunction"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "maraniedcbacff333": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "CreateFormFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "GetSubmissionsFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "GetSubmissionsFunctionNew": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "SubmissionRouterFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "SubmitFormFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "UpdateSubmissionStatusFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_CreateFormFunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CreateFormFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_CreateFormFunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CreateFormFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_GetSubmissionsFunctionNew_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "GetSubmissionsFunctionNew"
+        }
+      ]
+    },
+    "AMPLIFY_function_GetSubmissionsFunctionNew_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "GetSubmissionsFunctionNew"
+        }
+      ]
+    },
+    "AMPLIFY_function_GetSubmissionsFunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "GetSubmissionsFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_GetSubmissionsFunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "GetSubmissionsFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_SubmissionRouterFunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "SubmissionRouterFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_SubmissionRouterFunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "SubmissionRouterFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_SubmitFormFunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "SubmitFormFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_SubmitFormFunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "SubmitFormFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_UpdateSubmissionStatusFunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "UpdateSubmissionStatusFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_UpdateSubmissionStatusFunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "UpdateSubmissionStatusFunction"
+        }
+      ]
+    }
+  }
+}
