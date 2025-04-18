@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import { getCurrentUser } from '@aws-amplify/auth'; // Updated import
+import { fetchAuthSession } from '@aws-amplify/auth'; // Correct import for session management
 import AdminDashboard from './components/AdminDashboard';
 import DataEntryDashboard from './components/DataEntryDashboard';
 import PIDashboard from './components/PIDashboard';
@@ -16,12 +16,18 @@ function App() {
     const fetchUserSession = async () => {
       try {
         // Fetch the current session to get the ID token
-        const session = await getCurrentUser();
+        const session = await fetchAuthSession();
         console.log('App.jsx - Session:', session);
-        console.log('App.jsx - ID Token Payload:', session.getIdToken().payload);
+
+        // Get the ID token payload
+        const payload = session.tokens?.idToken?.payload;
+        if (!payload) {
+          throw new Error('ID token payload not found in session');
+        }
+        console.log('App.jsx - ID Token Payload:', payload);
 
         // Get groups from the ID token
-        const groups = session.getIdToken().payload['cognito:groups'] || [];
+        const groups = payload['cognito:groups'] || [];
         console.log('App.jsx - User Groups:', groups);
 
         // Prioritize Admin role if present, otherwise take the first group
@@ -37,6 +43,7 @@ function App() {
         setUserGroup(selectedGroup);
       } catch (error) {
         console.error('App.jsx - Error fetching session:', error);
+        setUserGroup(null); // Fallback to no role
       }
     };
 
